@@ -1,0 +1,371 @@
+/*
+Theme Name: Real Estate
+Theme URI: www.twitter.com/egolemur
+Description: Tema personalizado para empresa de bienes raices
+Version: 1.0
+Author: Leonardo Murillo
+Author URI: www.twitter.com/egolemur
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Etiquetas del tema (opcional)
+*/
+
+
+/* Reset de estilos para asegurar la consistencia entre navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /** Fuentes **/
+  --fuente-principal: 'Raleway', sans-serif;
+  --fuente-headings: 'Staatliches', cursive;
+
+  /* Colores */
+  --primario: #154360;
+  --default: #454545;	
+  --gris-oscuro: #2f2e2e;
+  --gris-claro: #DADADA;
+  --blanco: #FFF;
+  --negro: #000;
+}
+
+/* Medidas */
+.width-1500 {
+ max-width: 1500px;
+}
+
+.width-1000 {
+  max-width: 1000px;
+}
+
+/* Estilos globales */
+body {
+  height: 100vp;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;  
+  margin-top: 147px;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.container {  
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1500px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {      
+    padding: 40px;        
+  }
+}
+
+.container2 {
+  max-width: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  text-align: center; /* Opcional: para centrar horizontalmente */
+}
+
+.gray-background {
+  background-color: #f1f1f1;
+}
+
+/* Estilos de la barra de navegación */
+nav {    
+  color: #fff;   
+}
+
+.menu-container ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.menu-container a {
+  font-weight: 600;
+  transition: font-size 0.3s ease;
+}
+
+.menu-container ul li a:hover {
+  font-size: 150%;
+}
+
+@media screen and (max-width: 767px) {
+  /* Estilos para dispositivos con ancho de pantalla menor a 768px */
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Estilos para dispositivos con ancho de pantalla igual o mayor a 768px */
+  .menu-icon {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+/* Estilos del encabezado */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--default);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 20px 80px;
+  }  
+}
+
+.container-1500 {  
+  max-width: 1500px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 1.2em; /* Ajusta el tamaño según tus preferencias */
+}
+
+/* Estilos al logo */
+.logo img {
+  max-height: 100px;
+  width: auto;
+}
+
+/* Estilos del héroe */
+.hero {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Estilos de las propiedades */
+.container .container {
+  margin: 0;
+  padding: 40px 0;
+}
+
+.property {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.property img {
+  max-width: 100%;
+  height: auto;
+}
+
+.property h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.property p {
+  font-size: 16px;
+}
+
+/* Estilos del formulario de contacto */
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: var(--default);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos del pie de página */
+footer {
+  background-color: var(--default);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+footer ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilo de boton 1 */
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--default);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #555;
+}
+
+.boton:active {
+  background-color: #222;
+}
+
+.boton:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Menu flotante para dispositivos móviles */
+.menu-container {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease-in-out; 
+  background-color: var(--default);  
+}
+
+.floating-menu {      
+  padding: 20px auto;      
+  text-align: center;
+}
+
+.floating-menu a {
+  text-decoration: none;
+  color: #fff;  
+  padding: 10px 0;
+}
+
+.menu-container.open {
+  height: auto;
+}
+
+/* Layouts */
+.property-display {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-display > *:last-child {
+  margin-right: 0; /* Elimina el margen del último elemento para evitar espacio extra */
+}
+
+@media screen and (min-width: 768px) {
+  .property-display {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .property-display > * {
+    margin-right: 40px; /* Ajusta el valor según la separación deseada */
+  }
+  
+  .property-display > *:last-child {
+    margin-right: 0; /* Elimina el margen del último elemento para evitar espacio extra */
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px; /* Espacio entre las columnas */ 
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-grid {    
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; /* Espacio entre las columnas */
+  }
+
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Iconos */
+.icons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.icon img {
+  width: 40px;
+}
